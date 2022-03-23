@@ -24,8 +24,12 @@ if (ContactsFile) {
       // cout << " File is open" << endl;
    while( getline(ContactsFile, line) ) {
       // cout << line << endl;
-      split(line, ',');
-      cout << line;
+      vector<string> temp;
+      temp = split(line, ',');
+      for(int i=0; i<temp.size(); i++){
+         cout << temp[i] <<endl;
+      }
+//       cout << line;
       // contacts_vector.push_back(line);
    }
 }
